@@ -98,5 +98,18 @@ public class FV621 {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[@class='card-text']")));
         driver.findElement(By.xpath("//a[@href='/angular-realworld-example-app-testing-2023/']")).click();
     }
+    @When("se selecciona el articulo")
+    public void se_selecciona_el_articulo() {
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(driver -> driver.findElement(By.xpath("//h1[text()='Gaseosa']")));
+        driver.findElement(By.xpath("//h1[text()='Gaseosa']")).click();
+    }
+
+    @Then("realizo la eliminacion del articulo")
+    public void realizo_la_eliminacion_del_articulo() {
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(driver -> driver.findElement(By.xpath("//h1[text()='Gaseosa']")));
+        driver.findElement(By.xpath("//i[@class='ion-trash-a']")).click();
+    }
 }
 

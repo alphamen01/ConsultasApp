@@ -16,3 +16,7 @@ Feature: : Realizar Consultas
       When se selecciona el registro de un articulo
       Then realizo la eliminacion del comentario
       And regresar a la vista principal
+
+    Scenario: Realizar la eliminacion de un articulo
+      When se selecciona el articulo
+      Then realizo la eliminacion del articulo
