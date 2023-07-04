@@ -4,7 +4,6 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
@@ -111,5 +110,27 @@ public class FV621 {
         wait.until(driver -> driver.findElement(By.xpath("//h1[text()='Gaseosa']")));
         driver.findElement(By.xpath("//i[@class='ion-trash-a']")).click();
     }
+    //////
+    @When("se selecciona la opcion Settings")
+    public void se_selecciona_la_opcion_settings() {
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(driver -> driver.findElement(By.xpath("//a[@class='author']")));
+        driver.findElement(By.xpath("//a[@routerlink='/settings']")).click();
+    }
+
+    @And("actualizamos los datos de mi perfil")
+    public void actualizamos_los_datos_de_mi_perfil() {
+        driver.findElement(By.xpath("//input[@placeholder='URL of profile picture']"))
+                .sendKeys("https://drive.google.com/file/d/1zlmXaUU0z1fDsqALRq2dLCWVZM2an6uY/view?usp=drive_link");
+        driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("alphaman01");
+        driver.findElement(By.xpath("//textarea[@placeholder='Short bio about you']"))
+                .sendKeys("Bachiller en Ingeniería de Sistemas");
+    }
+
+    @Then("guardo la actualizacion registrada")
+    public void guardo_la_actualizacion_registrada() {
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
 }
 

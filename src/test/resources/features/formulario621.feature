@@ -20,3 +20,8 @@ Feature: : Realizar Consultas
     Scenario: Realizar la eliminacion de un articulo
       When se selecciona el articulo
       Then realizo la eliminacion del articulo
+
+    Scenario: Realizar la edicion de los datos de mi perfil
+      When se selecciona la opcion Settings
+      And actualizamos los datos de mi perfil
+      Then guardo la actualizacion registrada
