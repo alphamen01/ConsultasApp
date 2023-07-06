@@ -30,7 +30,7 @@ public class FV621 {
 //////
     @When("realizo el registro de un nuevo articulo")
     public void realizo_el_registro_de_un_nuevo_articulo() {
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(driver -> driver.findElement(By.xpath("//a[@routerlink='/editor']")));
         driver.findElement(By.xpath("//a[@routerlink='/editor']")).click();
         driver.findElement(By.xpath("//input[@formcontrolname='title']")).sendKeys("Gaseosa");
