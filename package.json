@@ -1,0 +1,14 @@
+{
+  "name": "consultasapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "report": "node index.js"
+  },
+  "author": "alphaman01",
+  "license": "ISC",
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^3.4.0"
+  }
+}
