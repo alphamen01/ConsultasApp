@@ -14,4 +14,4 @@ Tener instalado:
 
 Maven (apache-maven-3.9.1)
 
-Java (8 o superior)
+Java 8
