@@ -15,3 +15,17 @@ Tener instalado:
 Maven (apache-maven-3.9.1)
 
 Java 8
+
+**Entorno**
+
+Cucumber 7.12.1
+
+Java 8
+
+Maven 3.11.0
+
+JUnit 5
+
+Selenium 4.10.0 
+
+Intellij IDEA CE - plugins(Cucumber, Cucumber for java, Gherkin)
