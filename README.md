@@ -2,7 +2,7 @@
 
 **Instalacion**
 
-Debes tener instalado Node.js una vez hayas clonado el proyecto, para no tener confictos con la carpeta node_modules lo recomendable es eliminar dicha carpeta, posteriormente ejecutar el comando :
+Debes tener instalado Node.js una vez hayas clonado el proyecto, posteriormente ejecutar el comando :
 
 *npm install*
 
