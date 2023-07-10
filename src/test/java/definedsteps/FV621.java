@@ -46,6 +46,7 @@ public class FV621 {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(driver -> driver.findElement(By.xpath("//h1[text()='Gaseosa']")));
         driver.findElement(By.xpath("//a[@href='/angular-realworld-example-app-testing-2023/']")).click();
+        driver.quit();
     }
  //////
      @When("se selecciona el nuevo registro")
@@ -66,18 +67,13 @@ public class FV621 {
 
     @And("guardo el comentario realizado al registro")
     public void guardo_el_comentario_realizado_al_registro() {
-        /*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(driver -> driver.findElement(By.xpath("//span[text()=' Bebidas ']")));
-        driver.findElement(By.xpath("//textarea[@formcontrolname='body']"))
-                .sendKeys(" a base de agua carbonatada, edulcorantes naturales como fructosa o sacarosa " +
-                        "o sintéticos como el ciclamato (E952), acidulantes, colorantes, antioxidantes, estabilizadores " +
-                        "de acidez y conservantes.");
-        driver.findElement(By.xpath("//button[@type='button']")).click();*/
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(driver -> driver.findElement(By.xpath("//p[@class='card-text']")));
         driver.findElement(By.xpath("//a[@href='/angular-realworld-example-app-testing-2023/']")).click();
+        driver.quit();
     }
+    //
 ///
     @When("se selecciona el registro de un articulo")
     public void se_selecciona_el_registro_de_un_articulo() {
@@ -96,7 +92,9 @@ public class FV621 {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[@class='card-text']")));
         driver.findElement(By.xpath("//a[@href='/angular-realworld-example-app-testing-2023/']")).click();
+        driver.quit();
     }
+    //
     @When("se selecciona el articulo")
     public void se_selecciona_el_articulo() {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
@@ -109,6 +107,7 @@ public class FV621 {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(driver -> driver.findElement(By.xpath("//h1[text()='Gaseosa']")));
         driver.findElement(By.xpath("//i[@class='ion-trash-a']")).click();
+        driver.quit();
     }
     //////
     @When("se selecciona la opcion Settings")
@@ -130,6 +129,7 @@ public class FV621 {
     @Then("guardo la actualizacion registrada")
     public void guardo_la_actualizacion_registrada() {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.quit();
     }
 
 }
